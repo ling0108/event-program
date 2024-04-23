@@ -1,10 +1,9 @@
-{
-    "event": {
-        "24": [
-            {
-                "day": 24,
-                "month": "May"
-            },
+[
+    {
+        "id": 24,
+        "day": 24,
+        "month": "May",
+        "program": [
             {
                 "time": "4.00pm-5.30pm",
                 "venue": "Studio Theatre (150 pax)",
@@ -13,25 +12,19 @@
                 "link": "http://www.zaobao.com.sg"
             },
             {
-                "time": "4.00pm-5.30pm",
+                "time": "7.00pm-9.30pm",
                 "venue": "Studio Theatre (150 pax)",
                 "title": "城市阅读节开幕式",
                 "tab": "讲座/分享会",
                 "link": "http://www.zaobao.com.sg"
             }
-        ],
-        "25": [
-            {
-                "day": 25,
-                "month": "May"
-            },
-            {
-                "time": "4.00pm-5.30pm",
-                "venue": "Studio Theatre (150 pax)",
-                "title": "城市阅读节开幕式",
-                "tab": "讲座/分享会",
-                "link": "http://www.zaobao.com.sg"
-            },
+        ]
+    },
+    {
+        "id": 25,
+        "day": 25,
+        "month": "May",
+        "program": [
             {
                 "time": "4.00pm-5.30pm",
                 "venue": "Studio Theatre (150 pax)",
@@ -40,7 +33,7 @@
                 "link": "http://www.zaobao.com.sg"
             },
             {
-                "time": "4.00pm-5.30pm",
+                "time": "7.00pm-9.30pm",
                 "venue": "Studio Theatre (150 pax)",
                 "title": "城市阅读节开幕式",
                 "tab": "讲座/分享会",
@@ -48,4 +41,4 @@
             }
         ]
     }
-}
+]
