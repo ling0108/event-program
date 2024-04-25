@@ -1,17 +1,19 @@
 let eventProgram;
 
-fetch("event.json")
+fetch("events.json")
     .then((res) => res.json())
     .then((data) => {
         eventProgram = data;
-        console.log(eventProgram[0].day);
-        let date = '';
+        // console.log(eventProgram[0].day);
+        let cal = '';
+        let program = '';
         
         eventProgram.forEach(post => {
-            date += `
-            <div class="date">${eventProgram[0].day}<span class="month">${eventProgram[0].month}</span></div>
+            cal += `
+             <div class="circle" id="${(eventProgram.may.id)}">${(eventProgram.may.id)}</div>
+          
             ` ;
-            
+           
         })
-         document.getElementById('date').innerHTML = date;
+         document.getElementById('cal').innerHTML = cal;
     })
