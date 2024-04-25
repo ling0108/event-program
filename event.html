@@ -1,4 +1,94 @@
- var calendarData = {
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendar</title>
+        <style>
+            .date-column {
+                float: left;
+                width: 20%;
+                padding: 10px;
+            }
+
+            .date-item {
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+
+            .date-item.active {
+                font-weight: bold;
+            }
+
+            .event-column {
+                float: left;
+                width: 30%;
+                padding: 10px;
+            }
+
+            .event {
+                display: none;
+            }
+
+            .event.active {
+                display: block;
+            }
+
+            .event h3 {
+                margin-top: 0;
+            }
+
+            .event p {
+                margin: 5px 0;
+            }
+
+            .date-details-column {
+                float: left;
+                width: 20%;
+                padding: 10px;
+            }
+
+            .date-details {
+                margin-bottom: 10px;
+                display: none;
+            }
+
+            .date-details.active {
+                display: block;
+            }
+
+            .date-details p {
+                margin: 5px 0;
+            }
+
+            .month {
+                margin-bottom: 20px;
+            }
+
+            .program {
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+            }
+
+            .tab {
+                font-weight: bold;
+            }
+
+            .title {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="date-column" id="date-column"></div>
+        <div class="event-column" id="event-column"></div>
+        <div class="date-details-column" id="date-details-column"></div>
+        <script>
+            var calendarData = {
                 "calendar": {
                     "May": [
                         {
@@ -156,8 +246,8 @@
             };
 
             var dateColumn = document.getElementById("date-column");
-var eventColumn = document.getElementById("event-column");
- var dateDetailsColumn = document.getElementById("date-details-column");
+            var eventColumn = document.getElementById("event-column");
+            var dateDetailsColumn = document.getElementById("date-details-column");
 
             function displayEvents(dateId) {
                 var allDates = document.querySelectorAll(".date-item");
@@ -175,7 +265,8 @@ var eventColumn = document.getElementById("event-column");
 
                 var activeEvents = document.getElementById(dateId + "-events");
                 activeEvents.classList.add("active");
-                    var allDateDetails = document.querySelectorAll(".date-details");
+
+                var allDateDetails = document.querySelectorAll(".date-details");
                 allDateDetails.forEach(function (dateDetail) {
                     dateDetail.classList.remove("active");
                 });
@@ -184,7 +275,6 @@ var eventColumn = document.getElementById("event-column");
                 activeDateDetail.classList.add("active");
             }
 
-  
             Object.keys(calendarData.calendar).forEach(function (month) {
                 var monthDiv = document.createElement("div");
                 monthDiv.classList.add("month");
@@ -196,7 +286,7 @@ var eventColumn = document.getElementById("event-column");
                 days.forEach(function (day) {
                     var dateDiv = document.createElement("div");
                     dateDiv.classList.add("date-item");
-                    dateDiv.setAttribute("id", day.id); 
+                    dateDiv.setAttribute("id", day.id);
                     dateDiv.textContent = day.date;
                     dateDiv.addEventListener("click", function () {
                         displayEvents(day.id);
@@ -210,9 +300,9 @@ var eventColumn = document.getElementById("event-column");
                     day.events.forEach(function (event) {
                         var eventDiv = document.createElement("div");
                         eventDiv.classList.add("program");
-                        eventDiv.innerHTML = 
+                        eventDiv.innerHTML =
                             "<div class='tab'>" + event.tab + "</div>" +
-                                "<div class='title'>" + event.title + "</div>" +
+                            "<div class='title'>" + event.title + "</div>" +
                             "<div class='time'>" + event.time + "</div>" +
                             "<div class='venue'>" + event.venue + "</div>" +
                             "<div class='link'><img class='img-responsive' src='img/linkout.svg'><a href='" + event.link + "'>Link</a></div>";
@@ -220,6 +310,7 @@ var eventColumn = document.getElementById("event-column");
                     });
 
                     eventColumn.appendChild(eventsDiv);
+
                     var dateDetailsDiv = document.createElement("div");
                     dateDetailsDiv.classList.add("date-details");
                     dateDetailsDiv.setAttribute("id", day.id + "-details");
@@ -229,3 +320,7 @@ var eventColumn = document.getElementById("event-column");
             });
 
             displayEvents("24");
+        </script>
+    </body>
+
+</html>

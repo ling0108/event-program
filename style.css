@@ -706,12 +706,49 @@ span.month {
 }
 
 .month {
-    font-size: 1.25rem;
-    font-weight: 700;
     line-height: 2;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.circle {
+.month h2 {
+    width: 100%;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+
+/* events*/
+.date-column {}
+
+.date-details-column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+}
+
+.date-details {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.date-details.active {
+    display: block;
+}
+
+.date-details p {
+    margin: 5px 0;
+}
+
+.event-column {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+}
+
+.date-item {
+    cursor: pointer;
+    margin-bottom: 1em;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -721,9 +758,27 @@ span.month {
     color: #000;
     text-align: center;
     line-height: 1.5;
+    margin: 0 0.2em;
 }
 
-.circle.active {
-    background-color: #000;
-    color: #fff;
+.date-item.active {
+    font-weight: bold;
+    background: #003866;
+    color: #d0d0d2;
+}
+
+.event {
+    display: none;
+}
+
+.event.active {
+    display: flex;
+}
+
+.event h3 {
+    margin-top: 0;
+}
+
+.event p {
+    margin: 5px 0;
 }
