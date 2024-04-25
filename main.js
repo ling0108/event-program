@@ -4,13 +4,13 @@ fetch("events.json")
     .then((res) => res.json())
     .then((data) => {
         eventProgram = data;
-        // console.log(eventProgram[0].day);
+        console.log(eventProgram);
         let cal = '';
         let program = '';
         
-        eventProgram.forEach(post => {
+        eventProgram.forEach(calendars => {
             cal += `
-             <div class="circle" id="${(post.may.id)}">${(post.may.id)}</div>
+             <div class="circle" id="${(calendars.calendar.may.id)}">${(calendars.calendar.may.id)}</div>
           
             ` ;
            
