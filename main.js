@@ -10,7 +10,7 @@ fetch("events.json")
         
         eventProgram.forEach(post => {
             cal += `
-             <div class="circle" id="${(eventProgram.may.id)}">${(eventProgram.may.id)}</div>
+             <div class="circle" id="${(post.may.id)}">${(post.may.id)}</div>
           
             ` ;
            
