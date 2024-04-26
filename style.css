@@ -596,6 +596,25 @@ body {
 
 @media screen and (max-width:767px) {}
 
+/*Navigation*/
+nav {
+    width: 100vw;
+    background: #46b2f0;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+nav.navShadow {
+    box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+    height: 100px;
+}
+
+nav.navShadow #word-mark {
+    opacity: 0;
+}
+
 .navbar-cityread {
     width: 100%;
     max-width: 1200px;
@@ -603,7 +622,10 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
-    background-color: #d0d0d2;
+}
+
+.nav {
+    margin-bottom: 5em;
 }
 
 ul.menubar {
@@ -613,6 +635,54 @@ ul.menubar {
 ul.menubar li {
     background-color: #a2a3a4;
     padding: 1em;
+}
+
+#menu-toggle {
+    width: 55px;
+    height: 55px;
+    background: #2ea8ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-toggle:hover .bar {
+    width: 25px;
+}
+
+#menu-toggle.closeMenu .bar {
+    width: 25px;
+}
+
+#menu-toggle.closeMenu .bar:first-child {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#menu-toggle.closeMenu .bar:nth-child(2) {
+    transform: scale(0);
+}
+
+#menu-toggle.closeMenu .bar:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.bar:nth-child(2) {
+    width: 20px;
+    margin: 5px 0;
+}
+
+.bar:last-child {
+    width: 15px;
 }
 
 .menubar li {
@@ -639,6 +709,53 @@ ul.menubar li {
     display: flex;
     gap: 0.2em;
 }
+
+@media screen and (max-width: 767px) {
+    #menu-toggle {
+        display: flex;
+    }
+
+    ul {
+        display: inline-block;
+        width: 100vw;
+        height: 0;
+        background: #79edfc;
+        position: absolute;
+        top: 160px;
+        transform: translate(, );
+        box-shadow: 0 5px 30px -4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+    }
+
+    ul.showMenu {
+        height: 250px;
+    }
+
+    ul.showMenu li {
+        height: 80px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    li {
+        width: 50%;
+        height: 80px;
+        float: left;
+        padding-left: 40px;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 0;
+        transition: all 0.3s 0.1s;
+    }
+
+    li:first-child,
+    li:nth-child(2) {
+        margin-top: 80px;
+    }
+
+}
+
+
 
 .calendar {
     width: 85px;

@@ -10,6 +10,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -17,6 +18,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 }
                             ]
@@ -30,6 +32,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -37,6 +40,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -44,6 +48,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 }
                             ]
@@ -57,6 +62,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -64,6 +70,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -71,6 +78,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 }
                             ]
@@ -86,6 +94,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -93,6 +102,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 }
                             ]
@@ -106,6 +116,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -113,6 +124,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -120,6 +132,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 }
                             ]
@@ -133,6 +146,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -140,6 +154,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                     "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 },
                                 {
@@ -147,6 +162,7 @@
                                     "venue": "Studio Theatre (150 pax)",
                                     "title": "城市阅读节开幕式",
                                     "tab": "讲座/分享会",
+                                    "taburl": "/specials/crsg2024",
                                     "link": "http://www.zaobao.com.sg"
                                 }
                             ]
@@ -185,7 +201,7 @@ var eventColumn = document.getElementById("event-column");
             }
 
   
-            Object.keys(calendarData.calendar).forEach(function (month) {
+Object.keys(calendarData.calendar).forEach(function (month) {
                 var monthDiv = document.createElement("div");
                 monthDiv.classList.add("month");
                 monthDiv.innerHTML = "<h2>" + month + "</h2>";
@@ -211,7 +227,7 @@ var eventColumn = document.getElementById("event-column");
                         var eventDiv = document.createElement("div");
                         eventDiv.classList.add("program");
                         eventDiv.innerHTML = 
-                            "<div class='tab'>" + event.tab + "</div>" +
+                            "<div class='tab'><a href='" + event.taburl + "'>" + event.tab + "</a></div>" +
                                 "<div class='title'>" + event.title + "</div>" +
                             "<div class='time'>" + event.time + "</div>" +
                             "<div class='venue'>" + event.venue + "</div>" +
@@ -223,9 +239,25 @@ var eventColumn = document.getElementById("event-column");
                     var dateDetailsDiv = document.createElement("div");
                     dateDetailsDiv.classList.add("date-details");
                     dateDetailsDiv.setAttribute("id", day.id + "-details");
-                    dateDetailsDiv.innerHTML = "<p><strong>Date:</strong> " + day.date + "</p>";
+                    dateDetailsDiv.innerHTML = "<p><strong>" + month +" </strong> " + day.date + "</p>";
                     dateDetailsColumn.appendChild(dateDetailsDiv);
                 });
             });
 
-            displayEvents("24");
+displayEvents("24");
+            
+
+
+
+//Toggle Menu
+	$('#menu-toggle').on('click', () => {
+		$('#menu-toggle').toggleClass('closeMenu');
+		$('ul').toggleClass('showMenu');
+		
+		$('li').on('click', () => {
+			$('ul').removeClass('showMenu');
+			$('#menu-toggle').removeClass('closeMenu');
+		});
+	});
+	
+	

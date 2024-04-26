@@ -12,19 +12,28 @@
     <body>
         <div id="cityreading">
             <div class="wrapper">
-                <div class="display-full">
-                    <div class="navbar-cityread" id="cityread">
-                        <ul class="menubar">
-                            <li><a href="#">讲座/分享会<span class="en">Talks</span></a></li>
-                            <li><a href="#">好看好听 <span class="en">Great Reads/ Listens</span></a></li>
-                            <li><a href="#">儿童阅读 <span class="en">Kids Read</span></a></li>
-                            <li><a href="#">活动<span class="en">Activities</span></a></li>
-                            <li><a href="#">展卖会 <span class="en">Promotions</span></a></li>
-                            <li><a href="#">媒体报道<span class="en">From the Press</span></a></li>
-                        </ul>
-                    </div>
+                <div class="display-full nav">
+                    <nav>
+                        <div class="navbar-cityread" id="cityread">
+                            <div id="menu-toggle">
+                                <div id="menu-icon">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                            </div>
+                            <ul class="menubar">
+                                <li><a href="#">讲座/分享会<span class="en">Talks</span></a></li>
+                                <li><a href="#">好看好听 <span class="en">Great Reads/ Listens</span></a></li>
+                                <li><a href="#">儿童阅读 <span class="en">Kids Read</span></a></li>
+                                <li><a href="#">活动<span class="en">Activities</span></a></li>
+                                <li><a href="#">展卖会 <span class="en">Promotions</span></a></li>
+                                <li><a href="#">媒体报道<span class="en">From the Press</span></a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-                <div class="display-full">
+                <div class="display-full cal">
                     <div class="display-md-7 event-wrap">
                         <div class="calendar" id="date-details-column">
                         </div>
@@ -38,7 +47,8 @@
                 </div>
             </div>
         </div>
-        <script src="script.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 
 </html>
